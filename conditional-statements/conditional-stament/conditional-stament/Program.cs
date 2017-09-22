@@ -10,28 +10,41 @@ namespace conditional_stament
     {
         static void Main(string[] args)
         {
+            // Define instructions
             Console.WriteLine("Ohjelma tulostaa positiivinen, negatiivinen tai nolla.");
-            Console.Write("Syötä luku: ");
-            string userInput;
-            userInput = Console.ReadLine();
+            bool isNumber;
+            do
+            {
+                Console.Write("Syötä luku: ");
+                // Define variables
+                string userInput;
+                userInput = Console.ReadLine();
 
-            int evaluatedNumber;
-            int.TryParse(userInput, out evaluatedNumber);
+                int evaluatedNumber;
+                isNumber = int.TryParse(userInput, out evaluatedNumber);
+                // program logic
+                if (isNumber == true)
+                {
 
-            if (evaluatedNumber < 0
+                    if (evaluatedNumber < 0)
 
-{
-                Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen")
+                    {
+                        Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen");
+                    }
+                    else if (evaluatedNumber > 0)
+                    {
+                        Console.WriteLine($"Numero {evaluatedNumber} on positiivinen");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Numero {evaluatedNumber} on nolla");
+                    }
                 }
-            else if (evaluatedNumber > 0)
-            {
-                Console.WriteLine($"Numero {evaluatedNumber} on positiivinen")
-            }
-            else
-            {
-                Console.WriteLine($"Numero {evaluatedNumber} on nolla")
-            }
-            
+                else
+                {
+                    Console.WriteLine("Syötit muuta kuin numeroita!");
+                }
+            } while (isNumber == true);
             Console.ReadKey();
         }
     }
