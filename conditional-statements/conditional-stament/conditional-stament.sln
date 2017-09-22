@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "conditional-stament", "conditional-stament\conditional-stament.csproj", "{93BE71FC-BC37-4F70-A744-704D86DE620B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task-1", "conditional-stament\task-1.csproj", "{93BE71FC-BC37-4F70-A744-704D86DE620B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task-2", "task-2\task-2.csproj", "{A8DF7E20-C138-448A-A7D8-A20C91FBB1BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task-3", "task-3\task-3.csproj", "{66524A10-03D1-4A5A-8B50-7B1F2BC70AB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{93BE71FC-BC37-4F70-A744-704D86DE620B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93BE71FC-BC37-4F70-A744-704D86DE620B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93BE71FC-BC37-4F70-A744-704D86DE620B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DF7E20-C138-448A-A7D8-A20C91FBB1BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DF7E20-C138-448A-A7D8-A20C91FBB1BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DF7E20-C138-448A-A7D8-A20C91FBB1BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DF7E20-C138-448A-A7D8-A20C91FBB1BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66524A10-03D1-4A5A-8B50-7B1F2BC70AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66524A10-03D1-4A5A-8B50-7B1F2BC70AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66524A10-03D1-4A5A-8B50-7B1F2BC70AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66524A10-03D1-4A5A-8B50-7B1F2BC70AB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
