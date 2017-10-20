@@ -12,62 +12,41 @@ namespace task_3
         {
             {
                 // Define instructions
-                Console.WriteLine("Ohjelma selvittää on syötetty luku pariton tai parillinen.");
-                bool isNumber;
+                Console.WriteLine("Ohjelma selvittää on syötetty luku pariton tai parillinen sekä onko luku pos. neg vai nolla.");
+                
                 Console.Write("Syötä luku: ");
                 // Define variables
                 string userInput;
                 userInput = Console.ReadLine();
 
-                int evaluatedNumber;
-                isNumber = int.TryParse(userInput, out evaluatedNumber);
+                int evaluatedNumber=int.Parse(userInput);
 
-                // check isNumber
-                if (!isNumber)
-                {
-                    Console.WriteLine("Syötit väärän arvon");
-                    Console.ReadKey();
-                    return;
-                }
                 //program logic
-                if (isNumber == true)
-
+                // Even or odd
+                if (evaluatedNumber % 2 == 0)
                 {
-                    if (evaluatedNumber < 0)
-                    {
-                        if (evaluatedNumber % 2 == 0)
-                        {
-                            Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen ja parillinen ");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen ja pariton ");
-                        }
-                    }
-
-                    else if (evaluatedNumber > 0)
-                    {
-                        if (evaluatedNumber % 2 == 0)
-                        {
-                            Console.WriteLine($"Numero {evaluatedNumber} on positiivinen ja parillinen");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Numero {evaluatedNumber} on positiivinen ja pariton");
-                        }
-                    }
-                    else
-                    {
-
-                        if (evaluatedNumber % 2 == 0)
-                            Console.WriteLine($"Numero {evaluatedNumber} on nolla ja parillinen");
-                    }
+                    Console.Write($"Syötit luvun {evaluatedNumber}, se on parillinen ja ");
                 }
                 else
                 {
-                    Console.WriteLine("Syötit muuta kuin numeroita!");
-
+                    Console.Write($"Syötit luvun {evaluatedNumber}, se on pariton ja ");
                 }
+
+                // positive, negative or zero
+                if (evaluatedNumber < 0)
+
+                {
+                    Console.WriteLine("negatiivinen");
+                }
+                else if (evaluatedNumber > 0)
+                {
+                    Console.WriteLine("positiivinen");
+                }
+                else
+                {
+                    Console.WriteLine("nolla");
+                }
+
                 Console.ReadKey();
             }
         }

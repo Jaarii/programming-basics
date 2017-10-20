@@ -11,39 +11,27 @@ namespace task_2
         static void Main(string[] args)
         {
             // Define instructions
-            Console.WriteLine("Ohjelma selvittää on syötetty luku pariton tai parillinen.");
-            bool isNumber;
-                Console.Write("Syötä luku: ");
-                // Define variables
-                string userInput;
-                userInput = Console.ReadLine();
+            Console.WriteLine("Ohjelma selvittää onko syötetty luku pariton tai parillinen.");
 
-                int evaluatedNumber;
-                isNumber = int.TryParse(userInput, out evaluatedNumber);
-                
-                // program logic
-                if (evaluatedNumber % 2 == 0)
+            Console.Write("Syötä luku: ");
+            // Define variables
+            string userInput= Console.ReadLine(); // luetaan käyttäjän syöttämät arvot näppäimistöltä Console.ReadLine() ja tallennetaan ne muuttujaan userInput
+
+
+            int evaluatedNumber=int.Parse(userInput);
+            
+            // program logic
+            if (evaluatedNumber % 2 == 0)
             {
-
-                if (evaluatedNumber < 0)
-
-                {
-                    Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen");
-                }
-                else if (evaluatedNumber > 0)
-                {
-                    Console.WriteLine($"Numero {evaluatedNumber} on positiivinen");
-                }
-                else
-                {
-                    Console.WriteLine($"Numero {evaluatedNumber} on nolla");
-                }
+                Console.WriteLine($"Syötit luvun {evaluatedNumber}, se on parillinen");
             }
-                else
+            else
             {
                 Console.WriteLine($"Syötit luvun {evaluatedNumber}, se on pariton");
             }
-                Console.ReadKey();
+
+            
+            Console.ReadKey();
         }
     }
 }
