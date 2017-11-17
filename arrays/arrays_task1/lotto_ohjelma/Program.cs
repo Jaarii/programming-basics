@@ -12,10 +12,12 @@ namespace lotto_ohjelma
         {
             int[] lotto = new int[7];
             int[] extraNumbers = new int [2];
+            int[] DoubleNumbers = new int[1];
             Random q = new Random();
             
             string printRighrLotteryRow = "";
             string printExtraNumbers = "";
+            string printDoubleNumbers = "";
 
             //Arvotaan oikea lottorivi
             for (int i = 0; i < 7; i++)
@@ -38,6 +40,7 @@ namespace lotto_ohjelma
 
             // Lisänumerot 2 kpl
 
+            
             for (int i = 0; i < 2; i++)
             {
                 int x = q.Next(1, 41);
@@ -50,7 +53,12 @@ namespace lotto_ohjelma
                     extraNumbers[i] = x;
                     printExtraNumbers += $"{extraNumbers[i]} ";
                 }
-            }
+
+            
+
+
+                }
+            Array.Sort(extraNumbers);
 
 
 
@@ -58,6 +66,7 @@ namespace lotto_ohjelma
             // Tuplausnumero
             Console.WriteLine($"Oikea loton rivi {printRighrLotteryRow}");
             Console.WriteLine($"Lisänumerot: {printExtraNumbers}");
+            Console.WriteLine($"Tuplausnumero on: {q.Next(1, 41)}");
 
             Console.ReadKey();
 
